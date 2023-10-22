@@ -5,6 +5,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @booknew = Book.new
+    @books = @user.books
   end
 
   def edit
